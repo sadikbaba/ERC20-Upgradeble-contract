@@ -16,8 +16,8 @@ contract upgradeToV2 is Script {
         vm.startBroadcast();
         tokenV2 = new ERC20V2();
         ERC20V1(payable(proxy)).upgradeToAndCall(address(tokenV2), "");
-        ERC20V2(proxy).initialize2();
+        ERC20V2(proxy).initialize();
         vm.stopBroadcast();
-        console.log("ERC20V2 deployed", proxy);
+        console.log("ERC20V2 Upgrade", proxy);
     }
 }

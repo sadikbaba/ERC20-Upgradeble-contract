@@ -7,7 +7,7 @@ import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable/proxy/utils/U
 import {ERC20Upgradeable} from "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
 
 contract ERC20V2 is Initializable, OwnableUpgradeable, UUPSUpgradeable, ERC20Upgradeable {
-    function initialize2() public initializer {
+    function initialize() public initializer {
         __Ownable_init(msg.sender);
         __ERC20_init("ERC20V2", "V2");
     }
@@ -18,6 +18,10 @@ contract ERC20V2 is Initializable, OwnableUpgradeable, UUPSUpgradeable, ERC20Upg
 
     function burn(uint256 amount) public onlyOwner {
         _burn(msg.sender, amount);
+    }
+
+    function version() public pure returns (uint256) {
+        return 2;
     }
 
     function _authorizeUpgrade(address newImplementation) internal override onlyOwner {}

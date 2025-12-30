@@ -16,5 +16,9 @@ contract ERC20V1 is Initializable, OwnableUpgradeable, UUPSUpgradeable, ERC20Upg
         _mint(msg.sender, amount);
     }
 
+    function version() public pure returns (uint256) {
+        return 1;
+    }
+
     function _authorizeUpgrade(address newImplementation) internal override onlyOwner {}
 }
