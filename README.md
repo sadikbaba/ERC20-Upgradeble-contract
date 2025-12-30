@@ -1,32 +1,31 @@
-This contract is upgradeble ERC20, i built the Token first then i come with additional features to add.
+# Upgradeable ERC20 Token
 
-# 1 contract first has only mint function but there is no burn function.
+This project is an **upgradeable ERC20 token**.  
+I first built the token with basic functionality, then added additional features via upgrades.
 
-so i decided to upgrade it.
+---
 
-how to use.
+## Version 1
 
-# forge build
+- Only has a **mint** function.  
+- **No burn** function yet.  
+- Later upgraded to V2 to add more features.
 
-  to compile.
+---
 
-# forge test
-  
-  to test
+## How to use
 
-# make deployOnSepolia
+### 1. Compile
 
-   to deploy and verify on sepolia but you need to load your API, private key and rpc url in .env file.
-if posible cast you private key in key store.
+```bash
+forge build
 
-# make deployOnAnvil
+forge test
 
-   to deploy on anvil
+make deployOnSepolia
 
-# make deployOnSepoliaUpgradeToV2
+make deployOnAnvil
 
-   to upgrade to v2  and verify on sepolia but you need to load your API, private key and rpc url in .env file.
-if posible cast you private key in key store.
+make deployOnSepoliaUpgradeToV2
 
-# make deployOnAnvilUpgradeToV2
-      to upgrade on anvil
+make deployOnAnvilUpgradeToV2
