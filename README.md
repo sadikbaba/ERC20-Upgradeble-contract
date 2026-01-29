@@ -1,11 +1,11 @@
-Upgradeable ERC20 Token
+# Upgradeable ERC20 Token
 
 This project is an upgradeable ERC20 token .  
 I first built the token with basic functionality, then added additional features via upgrades.
 
 ---
 
-Version 1
+# Version 1
 
 - Only has a mint function.  
 - No burn function yet.  
@@ -13,7 +13,7 @@ Version 1
 
 ---
 
-How to use
+## How to use
 
  1 Compile
 
